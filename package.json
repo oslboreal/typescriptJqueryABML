@@ -1,0 +1,9 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "@types/jquery": "^3.2.16",
+    "jquery": "^3.2.1",
+    "typescript": "^2.6.2"
+  }
+}

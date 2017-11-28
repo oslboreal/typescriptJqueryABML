@@ -1,0 +1,19 @@
+En primera instancia debo instalar node, para esto lo bajo de la página.
+Una vez instalado reinicio el visual code.
+
+Abro la terminal:
+
+-> npm init 
+(Crea el archivo package.json)
+
+-> npm install --save typescript
+(Instala el Typescript compiler y lo agrega al package con el --save)
+
+-> npm install --save jquery 
+(Instala el Jquery comun y corriente para mis scripts comunes.)
+
+-> nom install --save @types/jquery
+(Instala el Jquery que vamos a utilizar con typescript).
+
+Por último vamos a nuestro archivo de Typescript y ponemos la siguiente sentencia.
+/// <reference path="..\node_modules\@types\jquery\index.d.ts" />

@@ -1,0 +1,118 @@
+Caracteristicas faltantes de JS:
+- Tipos de variables. 
+- Errores en tiempo de escritura.
+- Auto completado dependiendo de la variable .
+- Metodo estatico de programacion 
+- Clases y modulos (Antes de ES6) .
+
+Sring:
+"Juan PÃ©rez"
+'UTN FRA'
+`<h1>Hola mundo</h1>`
+
+Vamos a poder crear tipos nuevos, interfaces y tipos genericos. 
+
+Es bÃ¡sicamente un superconjunto de javascript, es decir que puedo usar lo mismo que escribo en javascript en typescript.
+
+El tipo de dato:
+El tipo de dato es para evitar errores. 
+Es un tipo de "REGLA". 
+
+Tipos de variables: 
+-> var tiene alcance global. 
+-> let tiene alcance limitado, segÃºn el bloque en el que se encuentra.
+
+
+Declarar tipo de dato:
+let nombre:boolean = true; (Boolean es el tipo de dato.)
+let dinero:number = 3; // Soporta tanto enteros como flotantes.
+let esAquaman = true; (En este caso Typescript nos va a decir que si a Aquaman le querÃ©s poner un entero, te va a decir que no por que es bool)
+
+Tipo de dato Any:
+let vengador:any = "Dr.Strange";
+vengador = 150; // Esto estÃ¡ perfecto y no tira error. 
+// Explicitamente lo llamamos como Any. 
+
+Arrays::::::::::::::::::::::::::::::::::::::
+
+Son iguales que js pero podemos definir que tipo de dato contienen.
+
+let vector = [1, 2 ,3, 4,5,6];
+
+let vector:number[] = [1,2,3];
+let vector:string[] = ["Yes", "no"];
+
+Tuplas::::::::::::::::::::::::::::::::::::::
+
+let:heroe:[string, number] = ["DrStrange", 100];
+
+Puedo declarar un Array donde el primer elemento sea del tipo String y el segundo del tipo number, pero si quiero asignar
+un valor comÃºn no me va a dejar, solo me va a dejar si los datos a cargar corresponde al tipo de dato.
+
+Enumeraciones:::::::::::::::::::::::::::::::
+enum Especialidades{
+    pediatra,
+    cardiologo,
+    clinico
+}
+
+Funciones bÃ¡sicas::::::::::::::::::::::::::
+let heroe:string = "flash";
+function imprime_heroe():string{
+    return heroe;
+}
+
+let activar_batisenal 0 function():string{
+    return "batiseÃ±al activada";
+}
+
+console.log(imprime_heroe());
+console.log(activar_batisenal());
+
+ParÃ¡metros opcionales::::::::::::::::::::::::
+
+function nombreCompleto(nombre:string, apellido?:string):string{
+    if(apellido)
+    {
+        return nombre + '' + apellido;
+        else
+        return nombre;
+    }
+}
+
+ParÃ¡metros por defecto::::::::::::::::::::::::
+function nombreCompleto(nombre:string, apellido:string, capitalozado:boolean = false):string
+{
+ ... POR DEFECTO SI NO PASO EL TERCER PARAMETRO, POR DEFECTO VA A SER FALSE.
+}
+
+Tipo FunciÃ³n::::::::::::::::::::::::::::::::::
+function sumar(a:number, b:number):number{
+    return a+b;
+}
+
+let miFuncion:(x:number, y:number)=>number;
+Aca estoy diciendo que mi funciÃ³n va a poder guardar funciones de ese tipo. 
+
+Agregar referencia a un TS.
+
+/// <reference path="..." />
+
+Y ademÃ¡s en el indice se tiene que llamar a esas funciones. 
+con script scr "validaciones/textos.js 
+si tuvieramos muchos ts habria que traer a todos, lo que se puede hacer para evitar eso 
+podrÃ­amos decirle por consola que el resultado de esto lo ponga en unico archivo de salida 
+
+typescript comando carpeta archivo  archivos a agregar 
+esto se tiene que hacer en el orden que se necesita, como se podra ver al final llamo a app.ts que depende de los dos anteriores
+
+tsc -outFile public/app.js validaciones/textos.ts validaciones/numeros.ts app.ts
+
+Iteraciones:
+
+for (let entry of someArray) {
+    console.log(entry); // 1, "string", false
+}
+
+Include del JQUERY en TS:
+/// <reference path="..\node_modules\@types\jquery\index.d.ts" />

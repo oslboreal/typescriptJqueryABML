@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Los scripts propios se llaman al final de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>    
+    <title>ABML - Filtros</title>
+</head>
+<body>
+    <div id="row" name="header" style=""> 
+        <div class="col-lg-12" id="" name="" style="background-color:darkgray; padding: 5px; text-align: center"><h1>Segundo Parcial</h1></div>
+    </div>
+    <div id="row" name="body" style="display: flex">
+        <!-- Barra izquierda -->
+        <div class="col-lg-1" id="" name="" style="background-color:rgb(88, 88, 88)" ></div>
+
+        <!-- Contenido principal -->
+        <div class="col-lg-10" id="" name="" style="background-color:rgb(194, 194, 194); padding-top: 15px;">
+
+            <!-- Formulario -->
+            <center>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <label for="edad">Edad:</label>
+                <input type="text" name="edad" id="edad">
+                <label for="tipo">Tipo:</label>
+                <select name="tipo" id="tipo">
+                    <option value="perro">Perro</option>
+                    <option value="roedor">Roedor</option>
+                    <option value="gato">Gato</option>
+                    <option value="reptil">Reptil</option>
+                    <option value="ave">Ave</option>
+                </select>
+                <label for="patas">Patas:</label>
+                <input type="number" name="patas" id="patas"><br><br>
+            </center>
+            <center>
+                <div id="test"></div>
+                <button class="btn btn-default" id="agregar" name="agregar">Agregar</button>
+                <button class="btn btn-default">Modificar</button>
+                <button class="btn btn-default" id="eliminar" name="eliminar">Eliminar</button>
+                <button class="btn btn-default" id="limpiar">Limpiar LocalStorage</button>
+            </center>
+            <br><br>
+
+            <!-- Filtros y tabla -->
+            <center>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="checknombre" value="checknombre"> Mostrar solo nombre
+                        </label>
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="checkedad" value="checkedad"> Mostrar solo edad
+                        </label>
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" id="checktipo" value="checktipo"> Mostrar solo tipo
+                        </label>
+                    </div>
+            <div class="container" id="filtros">Filtros.</div>
+            <div class="table-responsive table-bordered table-striped">
+                <table class="table" id="tabla">
+                        
+                </table>
+            </center> 
+
+            <br><br>
+        </div>
+
+        <!-- Barra derecha -->
+        <div class="col-lg-1" id="" name="" style="background-color:rgb(88, 88, 88)"></div>
+    </div>
+    <div id="row" name="footer">
+        <div class="col-lg-12" id="" name="" style="padding: 5px; background-color:darkgray"><h5>Todos los derechos reservados.</h5></div>
+    </div>
+    <!-- Scripts propios -->
+    <script src="scripts/localAdmin.js"></script>
+    <script src="scripts/webfuncs.js"></script>
+    <script src="scripts/mascotas.js"></script>
+
+    
+</body>
+</html>
